@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Flickr Search</title>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,10 +20,13 @@
     </section>
     <section class="displayData">
         <div ng-if="show && isSearching">
-            <h3>Gathering {{searchTerm}} photos...</h3>
+            <h3>Gathering <span class='highlight'>{{searchTerm}}</span> photos...</h3>
         </div>
         <div ng-if="show && resultsFound">
-            <h3 id="resultsMsg">We found {{numImages}} photos of {{searchTerm}}</h3>
+            <h3 id="resultsMsg">We found {{numImages}} photos of <span class='highlight'>{{searchTerm}}</span></h3>
+        </div>
+        <div ng-if="show && noneFound">
+            <h3 id="errorMsg">Sorry, we couldn't find any photos of <span class='highlight'>{{searchTerm}}</span>. Try again?</h3>
         </div>
         <ul class="imageList">
             <li ng-repeat="picture in results.photos.photo">

@@ -1,0 +1,113 @@
+/* -------------------------------------
+CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules bellow)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+}
+
+.highlight {
+    text-transform: uppercase;
+    color: firebrick;
+}
+
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+header {
+    font-family: "Permanent Marker", cursive;
+    font-size: 5rem;
+    margin: 3rem auto;
+}
+
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+.searchBar {
+    margin: 0 auto;
+}
+
+.searchBar input {
+    border: 1px solid #888;
+}
+
+.searchBar button {
+    border-radius: 4px;
+    border: 1px solid #888;
+    background-color: #fff;
+}
+
+.searchBar button:hover {
+    background-color: firebrick;
+    color: #fff;
+}
+
+.displayData h3 {
+    margin: 3rem auto;
+    font-size: 1.8rem;
+}
+
+.displayData ul {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.displayData li {
+    width: 24%;
+    display: inline-block;
+}
+
+.displayData img {
+    height: 13rem;
+    width: 75%;
+}
+
+.displayData .caption {
+    min-height: 3rem;
+}
+
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+
+/* -------------------------------------
+place all the desktop styles above this line
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+place all the mobile tables styles bellow this line
+*/
