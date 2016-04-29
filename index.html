@@ -20,13 +20,13 @@
     </section>
     <section class="displayData">
         <div ng-if="show && isSearching">
-            <h3>Gathering <span class='highlight'>{{searchTerm}}</span> photos...</h3>
+            <h3 class="fade-in">Gathering <span class='highlight'>{{searchTerm}}</span> photos...</h3>
         </div>
         <div ng-if="show && resultsFound">
-            <h3 id="resultsMsg">We found {{numImages}} photos of <span class='highlight'>{{searchTerm}}</span></h3>
+            <h3 class="fade-in" id="resultsMsg">We found {{numImages}} photos of <span class='highlight'>{{searchTerm}}</span></h3>
         </div>
         <div ng-if="show && noneFound">
-            <h3 id="errorMsg">Sorry, we couldn't find any photos of <span class='highlight'>{{searchTerm}}</span>. Try again?</h3>
+            <h3 class="fade-in" id="errorMsg">Sorry, we couldn't find any photos of <span class='highlight'>{{searchTerm}}</span>. Try again?</h3>
         </div>
         <ul class="imageList">
             <li ng-repeat="picture in results.photos.photo">
@@ -44,6 +44,3 @@
 </body>
 
 </html>
-<!--Key: b1e9c4d5562276793face6cb00335661
-secret: a5df353fd4e5832
--->
